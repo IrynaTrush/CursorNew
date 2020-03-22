@@ -1,0 +1,72 @@
+body {
+    background: url('images/Ts2mLC.jpg') no-repeat;
+    background-size: cover;
+}
+
+.generator__wrapper {
+    
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.title {
+    font-family: 'Dancing Script', cursive;
+    text-align: end;
+    font-size: 50px;
+    color:  #ff4d4d;
+    padding-right: 150px;
+}
+
+.counter {
+    background-color: #ff9999;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #ff4d4d;
+    padding: 15px 0;
+    text-align: center; 
+    width: 15%;
+    border: none;
+    margin: 0 auto;
+    margin-right: 400px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 25px;
+    color: #800000;
+    font-weight: 700;
+
+}
+
+.outputCount {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.range {
+  display: none;
+  background-color: #ff9999;
+  box-shadow: 5px 5px 10px #ff4d4d;
+  border-radius: 50%;
+  border: none;
+  width: 50px;
+  padding: 10px 0;
+  color: #800000;
+  font-size: medium;
+}
+
+.output {
+   display: none;
+   width: 150px;
+   background-color: #ffcccc;
+   border-radius: 10px;
+   padding: 10px 0;
+   margin: 0 10px;
+   text-align: center;
+   color: #800000;
+   box-shadow: 5px 5px 10px #ffb3b3;
+   font-weight: 700;
+   font-size: 15px;
+}
+
+.decreaser {
+    margin-left: 490px;
+}
