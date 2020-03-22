@@ -7,7 +7,6 @@ let i = 0;
 const inc = increaser();
 const dec = decreaser();
 const text = document.querySelector('.text');
-console.log(text)
 const up = document.querySelector('.up');
 const down = document.querySelector('.down');
 const sizeFont = 14;
@@ -32,7 +31,7 @@ function* newFontGenerator(font) {
            ++font
         }
         if(size === 'down') {
-            font--;
+            --font;
         }
     }
 }
