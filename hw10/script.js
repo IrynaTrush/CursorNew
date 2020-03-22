@@ -16,17 +16,17 @@ document.addEventListener('keydown', e => {
 
 let song = null;
 
+document.addEventListener('play', e => {
+    if(song && song != e.target) {
+        song.pause();
+    }
+    song = e.target;
+},
+true
+);
+
 function playList(item) {
     let song = document.getElementById(item.dataset.note);
     song.play();
     song.currentTime = 0;
-
-    document.addEventListener('play', e => {
-        if(song && song != e.target) {
-            song.pause();
-        }
-        song = e.target;
-    },
-    true
-    );
 }
