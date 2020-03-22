@@ -3,19 +3,37 @@ const decrBtn = document.querySelector('.decreaser');
 const incrBtn = document.querySelector('.increaser');
 const outputCount = document.querySelector('.outputCount');
 const output = document.querySelector('.output');
+let i = 0;
 const inc = increaser();
 const dec = decreaser();
-let i = 0;
+const text = document.querySelector('.text');
+console.log(text)
+const up = document.querySelector('.up');
+const down = document.querySelector('.down');
+const sizeFont = 14;
 
 function* increaser() {
     while(true) {
-        yield i++;
+        yield ++i;
     }
 }
 
 function* decreaser() {
     while(true) {
-        yield i--;
+        yield --i;
+    }
+}
+
+const fontGenerator = newFontGenerator(sizeFont);
+function* newFontGenerator(font) {
+    while (true) {
+        let size = yield font
+        if(size === 'up') {
+           ++font
+        }
+        if(size === 'down') {
+            font--;
+        }
     }
 }
 
@@ -34,4 +52,12 @@ incrBtn.addEventListener('click', () => {
 decrBtn.addEventListener('click', () => {
     output.innerHTML = '';
     output.innerHTML = dec.next().value;
+})
+
+up.addEventListener('click', () => {
+   text.style.fontSize = fontGenerator.next('up').value + 'px';
+ })
+
+down.addEventListener('click', () => {
+    text.style.fontSize = fontGenerator.next('down').value + 'px';
 })
