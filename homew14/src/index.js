@@ -144,6 +144,7 @@ hw12.addEventListener('click', () => {
 });
 
 hw13.addEventListener('click', () => {
+    stopPlay()
     block.style.display = 'none';
     characters.style.display = 'none';
     console.log(inc.next().value);
