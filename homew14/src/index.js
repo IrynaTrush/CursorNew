@@ -135,7 +135,9 @@ function stopPlay() {
 }
 
 hw12.addEventListener('click', () => {
+    stopPlay()
     block.style.display = 'none';
+    characters.innerHTML = '';
     characters.style.display = 'block';
     characters.style.display = 'flex';
     getCharacters().then(film => {});
